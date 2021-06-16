@@ -1,7 +1,17 @@
 {
     "name": "makechtec/nanokit",
     "description": "library for php proyects",
-    "require":{
+    "type": "library",
+    "authors": [
+        {
+            "name": "Angel Dominguez",
+            "email": "angeldomp49@gmail.com"
+        }
+    ],
+    "require": {
+        "php":">=7.4.0"
+    },
+    "require-dev":{
         "illuminate/database": "*",
         "phpmailer/phpmailer": "*"
     },
@@ -14,5 +24,6 @@
         "files": [
             "src/Util/functions.php"
         ]
-    }
+    },
+    "license": "GLP-2"
 }
