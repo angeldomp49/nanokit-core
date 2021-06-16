@@ -1,0 +1,18 @@
+{
+    "name": "makechtec/nanokit",
+    "description": "library for php proyects",
+    "require":{
+        "illuminate/database": "*",
+        "phpmailer/phpmailer": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "PHPMailer\\PHPMailer\\": "vendor/phpmailer/phpmailer/src",
+            "Illuminate\\Database\\": "vendor/illuminate/database",
+            "MakechTec\\Nanokit\\": "src"
+        },
+        "files": [
+            "src/Util/functions.php"
+        ]
+    }
+}
