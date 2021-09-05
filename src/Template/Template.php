@@ -1,6 +1,8 @@
 <?php
 namespace MakechTec\Nanokit\Template;
 
+use \Exception;
+
 class Template{
 
     private $data;
@@ -8,17 +10,17 @@ class Template{
 
     public function __construct( $filePath = "", $templateData = [] ){
 
-        $this->data = $template_data;
-        global $data;
-        $data = $this->data;
+        $this->data = $templateData;
 
         if(!file_exists($filePath)){
             throw new Exception("Error getting file template: " . $filePath);
         }
 
+        extract($this->data);
+
         ob_start();
         include( $filePath );
-        $this->content( ob_get_contents() );
+        $this->content = ob_get_contents();
         ob_end_clean();
     }
 

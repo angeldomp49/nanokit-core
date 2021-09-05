@@ -1,6 +1,5 @@
 <?php
 namespace MakechTec\Nanokit\Url;
-use MakechTec\Nanokit\Util\H;
 
 class Parser{
     public const FROM_ROOT_DIRECTORY_PROJECT = 'vendor/makechtec/nanokit/Url';
@@ -51,7 +50,7 @@ class Parser{
     
     public static function rootPath(){
         $pathFromDisk    = __DIR__;
-        $pathFromRootDirectoryProjectSameSlashes = self::equalSlashes( $pathFromDisk, FROM_ROOT_DIRECTORY_PROJECT);
+        $pathFromRootDirectoryProjectSameSlashes = self::equalSlashes( $pathFromDisk, self::FROM_ROOT_DIRECTORY_PROJECT);
     
         return str_replace( $pathFromRootDirectoryProjectSameSlashes, "", $pathFromDisk  );
     }
